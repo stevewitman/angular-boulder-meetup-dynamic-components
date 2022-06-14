@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 100%;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #1E75D2;
+  text-decoration: none;
+}
+

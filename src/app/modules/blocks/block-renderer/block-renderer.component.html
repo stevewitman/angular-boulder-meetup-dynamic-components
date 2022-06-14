@@ -1,0 +1,8 @@
+<button class="btn" (click)="getBlocks()">Load "Blocks" JSON</button>
+<button class="btn" (click)="showJson = !showJson">Hide/Show JSON</button>
+<button class="btn" (click)="renderBlocks()" *ngIf="blocksData$">Render Blocks</button>
+<pre *ngIf="showJson">{{ blocksData$ | async | json }}</pre>
+<!-- <button (click)="loadComponents()">Load Components</button> -->
+<div class="grid-container">
+  <ng-container #blockContainer></ng-container>
+</div>

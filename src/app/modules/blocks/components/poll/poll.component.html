@@ -1,0 +1,8 @@
+<div class="card poll">
+  <h2>{{ pollQuestion }}</h2>
+  <ng-container *ngIf="pollAnswers">
+    <div *ngFor="let answer of pollAnswers">
+      <p >{{ answer }}</p>
+    </div>
+  </ng-container>
+</div>

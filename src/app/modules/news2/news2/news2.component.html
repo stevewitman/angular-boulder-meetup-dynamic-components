@@ -1,0 +1,13 @@
+<h1>News2<span class="notes">(lazy-loaded module)</span></h1>
+
+<button class="btn" (click)="getBlocks()">Load "Blocks" JSON and Render Blocks</button>
+<div class="grid-container">
+  <ng-container *ngFor="let block of blocksData$ | async as blk">
+    <div [ngSwitch]="block.blockName">
+      <app-advertisement [inputData]="block.blockData" *ngSwitchCase="'advertisement'"></app-advertisement>
+      <app-poll [inputData]="block.blockData" *ngSwitchCase="'poll'"></app-poll>
+      <app-post [inputData]="block.blockData" *ngSwitchCase="'post'"></app-post>
+      <app-block-not-found *ngSwitchDefault></app-block-not-found>
+    </div>
+  </ng-container>
+</div>
